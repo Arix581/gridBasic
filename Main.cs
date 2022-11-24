@@ -1,5 +1,5 @@
 // Made by Benjamin Espenschied
-// V1.5
+// V1.6
 
 using System;
 
@@ -9,13 +9,14 @@ namespace myProgram
     {
         public int gridX;
         public int gridY;
-        public string[,] gridData = new string[gridX, gridY];
         
-        public Grid(X, Y)
+        public Grid(int X, int Y)
         {
             gridX = X;
             gridY = Y;
         }
+        
+        public string[,] gridData = new string[gridX, gridY];
         
         public void drawGridLine()
         {
@@ -25,12 +26,20 @@ namespace myProgram
             Console.WriteLine("+");
         }
         
-        public void fillGridData(string[,] data, column)
+        public void fillGridData(string[,] data, int column)
         {
-            for (int i = 0; i < gridX) {
+            for (int i = 0; i < gridX; i++) {
                 Console.Write("|" + data[i, column]);
             };
             Console.WriteLine("|");
+        }
+        
+        public void drawGrid() {
+            for (int i = 0; i < gridY; i++) {
+                drawGridLine();
+                fillGridData(gridData, i);
+            };
+            drawGridLine();
         }
     }
     
