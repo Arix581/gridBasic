@@ -1,5 +1,5 @@
 // Made by Benjamin Espenschied
-// V1.7.1
+// V1.7.2
 
 using System;
 
@@ -13,7 +13,7 @@ namespace myProgram
         public Grid(int X, int Y)
         {
             gridX = X;
-            gridY = Y;
+            gridY = Y; 
             public string[,] gridData = new string[gridX, gridY];
         }
         
@@ -47,7 +47,7 @@ namespace myProgram
     {
         static void Main(string[] args)
         {
-            
+            Console.WriteLine("Hello World");
         }
     }
 }
