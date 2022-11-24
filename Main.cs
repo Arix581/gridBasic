@@ -1,5 +1,5 @@
 // Made by Benjamin Espenschied
-// V1.4
+// V1.5
 
 using System;
 
@@ -23,6 +23,14 @@ namespace myProgram
                 Console.Write("+-");
             };
             Console.WriteLine("+");
+        }
+        
+        public void fillGridData(string[,] data, column)
+        {
+            for (int i = 0; i < gridX) {
+                Console.Write("|" + data[i, column]);
+            };
+            Console.WriteLine("|");
         }
     }
     
