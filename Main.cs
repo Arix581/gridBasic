@@ -1,5 +1,5 @@
 // Made by Benjamin Espenschied
-// V1.3
+// V1.4
 
 using System;
 
@@ -15,6 +15,14 @@ namespace myProgram
         {
             gridX = X;
             gridY = Y;
+        }
+        
+        public void drawGridLine()
+        {
+            for (int i = 0; i < gridX; i++) {
+                Console.Write("+-");
+            };
+            Console.WriteLine("+");
         }
     }
     
