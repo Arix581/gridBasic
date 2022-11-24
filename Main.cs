@@ -1,5 +1,5 @@
 // Made by Benjamin Espenschied
-// V1.6
+// V1.7.1
 
 using System;
 
@@ -14,9 +14,9 @@ namespace myProgram
         {
             gridX = X;
             gridY = Y;
+            public string[,] gridData = new string[gridX, gridY];
         }
         
-        public string[,] gridData = new string[gridX, gridY];
         
         public void drawGridLine()
         {
