@@ -1,5 +1,5 @@
 // Made by Benjamin Espenschied
-// V1.8
+// V1.9
 
 using System;
 
@@ -16,10 +16,14 @@ namespace myProgram
             gridX = X;
             gridY = _Y; 
             gridData = new string[X, _Y];
+            for (int i = 0; i < gridX; i++) 
+            {
+                for (int j = 0; j < gridY; j++)
+                {
+                    gridData[i, j] = " ";
+                };
+            };
         }
-            
-        
-        
         
         public void drawGridLine()
         {
@@ -54,7 +58,8 @@ namespace myProgram
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World");
+            Grid level01 = new Grid(7, 3);
+            level01.drawGrid();
         }
     }
 }
